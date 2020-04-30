@@ -1,0 +1,2 @@
+class Scouter < ApplicationRecord
+end
