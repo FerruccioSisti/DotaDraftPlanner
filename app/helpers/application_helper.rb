@@ -1,3 +1,5 @@
+require 'Nokogiri'
+require 'httparty'
 module ApplicationHelper
 
     def recent_games_scraper(player_url)
@@ -95,5 +97,5 @@ module ApplicationHelper
         puts(team_games.count)
         return team_games
     end
-    
+
 end
