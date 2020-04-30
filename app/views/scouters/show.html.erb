@@ -3,6 +3,10 @@
 <p>
   <strong>Team:</strong>
   <%= @scouter.team %>
+  <br>
+  <% if @scouter.team.present?%>
+      <%= esports_team_scraper(@scouter.team) %>
+  <% end %>
 </p>
 
 <p>
