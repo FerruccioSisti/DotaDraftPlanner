@@ -59,6 +59,9 @@ module ApplicationHelper
             org_list << stats
         end
 
+        # sort the list with most played heroes at the beginning
+        org_list = org_list.sort_by { |player| player[:total_games] }.reverse!
+        
         puts(org_list)
         puts(org_list.count)
         return org_list
