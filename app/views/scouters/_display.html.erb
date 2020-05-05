@@ -110,7 +110,7 @@ h2 a {
 
 <!-- team table -->
 <% if @scouter.team.present?%>
-<h2 style = "blue"><a href="<%= @scouter.team %>/heroes" target="_blank">Team <%= @scouter.team %></a></h2>
+<h2 style = "blue"><a href="<%= @scouter.team %>/heroes" target="_blank"><%= name_scraper(@scouter.team) %>'s Match History</a></h2>
 <table class="container">
 	<thead>
 		<tr>
@@ -134,7 +134,7 @@ h2 a {
 
 <!-- first player table -->
 <% if @scouter.player1.present?%>
-<h2 style = "blue"><a href="<%= @scouter.player1 %>/matches" target="_blank"><%= @scouter.player1 %>'s Recent Match History</a></h2>
+<h2 style = "blue"><a href="<%= @scouter.player1 %>/matches" target="_blank"><%= name_scraper(@scouter.player1) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
 		<tr>
@@ -160,7 +160,7 @@ h2 a {
 
 <!-- second player table -->
 <% if @scouter.player2.present?%>
-<h2 style = "blue"><a href="<%= @scouter.player2 %>/matches" target="_blank"><%= @scouter.player2 %>'s Recent Match History</a></h2>
+<h2 style = "blue"><a href="<%= @scouter.player2 %>/matches" target="_blank"><%= name_scraper(@scouter.player2) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
 		<tr>
@@ -186,7 +186,7 @@ h2 a {
 
 <!-- third player table -->
 <% if @scouter.player3.present?%>
-<h2 style = "blue"><a href="<%= @scouter.player3 %>/matches" target="_blank"><%= @scouter.player3 %>'s Recent Match History</a></h2>
+<h2 style = "blue"><a href="<%= @scouter.player3 %>/matches" target="_blank"><%= name_scraper(@scouter.player3) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
 		<tr>
@@ -212,7 +212,7 @@ h2 a {
 
 <!-- fourth player table -->
 <% if @scouter.player4.present?%>
-<h2 style = "blue"><a href="<%= @scouter.player4 %>/matches" target="_blank"><%= @scouter.player4 %>'s Recent Match History</a></h2>
+<h2 style = "blue"><a href="<%= @scouter.player4 %>/matches" target="_blank"><%= name_scraper(@scouter.player4) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
 		<tr>
@@ -238,7 +238,7 @@ h2 a {
 
 <!-- fifth player table -->
 <% if @scouter.player5.present?%>
-<h2 style = "blue"><a href="<%= @scouter.player5 %>/matches" target="_blank"><%= @scouter.player5 %>'s Recent Match History</a></h2>
+<h2 style = "blue"><a href="<%= @scouter.player5 %>/matches" target="_blank"><%= name_scraper(@scouter.player5) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
 		<tr>
