@@ -95,4 +95,16 @@ module ApplicationHelper
         return team_games
     end
 
+    def name_scraper(base_url)
+        unparsed_page = HTTParty.get(base_url)
+
+        if unparsed_page.response.body.nil? || unparsed_page.response.body.empty? then
+            return "Error retrieving URL"
+        end
+        
+        parsed_page = Nokogiri::HTML(unparsed_page)
+        name = parsed_page.css('div.header-content-title').children[0].children[0].text
+        return name
+    end
+
 end
