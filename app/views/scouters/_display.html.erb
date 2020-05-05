@@ -146,7 +146,7 @@ h2 a {
 	<tbody>
               <% team_arr = recent_games_scraper(@scouter.player1) %>
               <% team_arr.each do |listing| %>
-                    <% if listing[:total_games] >= 3 %>
+                    <% if listing[:total_games] >= 2 %>
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
@@ -172,7 +172,7 @@ h2 a {
 	<tbody>
               <% team_arr = recent_games_scraper(@scouter.player2) %>
               <% team_arr.each do |listing| %>
-                    <% if listing[:total_games] >= 3 %>
+                    <% if listing[:total_games] >= 2 %>
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
@@ -198,7 +198,7 @@ h2 a {
 	<tbody>
               <% team_arr = recent_games_scraper(@scouter.player3) %>
               <% team_arr.each do |listing| %>
-                    <% if listing[:total_games] >= 3 %>
+                    <% if listing[:total_games] >= 2 %>
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
@@ -224,7 +224,7 @@ h2 a {
 	<tbody>
               <% team_arr = recent_games_scraper(@scouter.player4) %>
               <% team_arr.each do |listing| %>
-                    <% if listing[:total_games] >= 3 %>
+                    <% if listing[:total_games] >= 2 %>
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
@@ -250,7 +250,7 @@ h2 a {
 	<tbody>
               <% team_arr = recent_games_scraper(@scouter.player5) %>
               <% team_arr.each do |listing| %>
-                    <% if listing[:total_games] >= 3 %>
+                    <% if listing[:total_games] >= 2 %>
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
