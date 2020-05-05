@@ -28,7 +28,7 @@ class ScoutersController < ApplicationController
 
     respond_to do |format|
       if @scouter.save
-        format.html { redirect_to @scouter, notice: 'Scouter was successfully created.' }
+        format.html { redirect_to @scouter, notice: 'Available information was retrieved' }
         format.json { render :show, status: :created, location: @scouter }
       else
         format.html { render :new }
