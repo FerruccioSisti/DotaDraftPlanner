@@ -31,12 +31,11 @@ h1 {
 }
 
 h2 {
-  font-size:1em;
+  font-size:18px;
   font-weight: 300;
   text-align: center;
   display: block;
   line-height:1em;
-  padding-bottom: 2em;
   color: #FB667A;
 }
 
@@ -106,7 +105,7 @@ h2 a {
 </head>
 <body>
 <h1 style = "color:white">DOTA 2 Draft Planner</h1>
-<h2 style = "color: #877c78;">Displaying all available and relevant stats for your draft</h2>
+<h2 style = "color: #877c78;">Displaying all available and relevant stats for your draft</h2><br><br>
 
 <!-- team table -->
 <% if @scouter.team.present?%>
@@ -115,7 +114,7 @@ h2 a {
 	<thead>
 		<tr>
 			<th><h1>Hero</h1></th>
-			<th><h1>Times Picked</h1></th>
+			<th><h1>Times Picked Overall</h1></th>
 			<th><h1>Win Rate</h1></th>
 		</tr>
 	</thead>
@@ -125,7 +124,7 @@ h2 a {
     		<tr>
     			<td><%= listing[:hero] %></td>
     			<td><%= listing[:times_picked] %></td>
-    			<td><%= listing[:win_percentage] %></td>
+    			<td><%= (listing[:win_percentage].tr('%', '')).to_i %>%</td>
     		</tr>
             <% end %>
 	</tbody>
@@ -150,7 +149,7 @@ h2 a {
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
-            			<td><%= (listing[:percentage]*100) %> %</td>
+            			<td><%= (listing[:percentage]*100).round(0) %>%</td>
     		        </tr>
                     <% end %>
             <% end %>
@@ -176,7 +175,7 @@ h2 a {
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
-            			<td><%= (listing[:percentage]*100) %> %</td>
+            			<td><%= (listing[:percentage]*100).round(0) %>%</td>
     		        </tr>
                     <% end %>
             <% end %>
@@ -202,7 +201,7 @@ h2 a {
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
-            			<td><%= (listing[:percentage]*100) %> %</td>
+            			<td><%= (listing[:percentage]*100).round(0) %>%</td>
     		        </tr>
                     <% end %>
             <% end %>
@@ -228,7 +227,7 @@ h2 a {
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
-            			<td><%= (listing[:percentage]*100) %> %</td>
+            			<td><%= (listing[:percentage]*100).round(0) %>%</td>
     		        </tr>
                     <% end %>
             <% end %>
@@ -254,7 +253,7 @@ h2 a {
     		        <tr>
             			<td><%= listing[:hero] %></td>
             			<td><%= listing[:total_games] %></td>
-            			<td><%= (listing[:percentage]*100) %> %</td>
+            			<td><%= (listing[:percentage]*100).round(0) %>%</td>
     		        </tr>
                     <% end %>
             <% end %>
