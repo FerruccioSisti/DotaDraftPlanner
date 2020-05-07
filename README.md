@@ -4,7 +4,7 @@
 This is my first project built using Ruby on Rails. The goal of this project was to create a single page where you can get a brief overview of what heroes your upcoming opponents have been playing in their recent games in order to help you prepare some draft ideas.
 <br><br>
 
-This project has been deployed through Heroku and is available to view/use [link](https://dota-draft-planner.herokuapp.com/){:target="_blank"} <a href="https://dota-draft-planner.herokuapp.com/" target="_blank">here</a>. I did not create the templates used for this website. They were found on the internet (creators are credited in comments on respective .erb view files) and edited to satisfy my requirements.
+This project has been deployed through Heroku and is available to view/use <a href="https://dota-draft-planner.herokuapp.com/" target="_blank">here</a>. I did not create the templates used for this website. They were found on the internet (creators are credited in comments on respective .erb view files) and edited to satisfy my requirements.
 <br><br>
 
 <h3>Usage</h3>
