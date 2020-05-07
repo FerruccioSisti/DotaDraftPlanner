@@ -8,7 +8,7 @@ This project has been deployed through Heroku and is available to view/use <a hr
 <br><br>
 
 <h3>Usage</h3>
-When using this web application, you can input links for up to five player's <a href = "https://www.dotabuff.com/" target = "_blank">dotabuff</a>profiles, as well as a team's eSports dotabuff profile. After providing the proper links, and clicking the "GET STATS" button at the bottom of the homepage, a webscraper is run that finds available data on the respective players most recent 50 games and displays any heroes with more than one game played along with their total winrate in the last 50 games in a table format. If you input a team eSports link, that teams top ten most picked heroes along with winrates will also be displayed.
+When using this web application, you can input links for up to five player's <a href = "https://www.dotabuff.com/" target = "_blank">dotabuff</a> profiles, as well as a team's eSports dotabuff profile. After providing the proper links, and clicking the "GET STATS" button at the bottom of the homepage, a webscraper is run that finds available data on the respective players most recent 50 games and displays any heroes with more than one game played along with their total winrate in the last 50 games in a table format. If you input a team eSports link, that teams top ten most picked heroes along with winrates will also be displayed.
 <br><br>
 
 <h3>Sample Run</h3>
