@@ -15,13 +15,13 @@ When using this web application, you can input links for up to five player's <a 
 Below is a sample run using the professional team OG's player/team profiles.
 <br>
 <h4>Home page, filled with dotabuff profiles</h4>
-<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/Media/homepage.png">
+<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/media/homepage.png">
 <br>
 
 <h4>The following images are all displayed in the same window, but I wasn't able to capture them all in a single screenshot</h4>
-<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/Media/testrun1.png">
-<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/Media/notail.png">
-<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/Media/topson.png">
-<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/Media/sumail.png">
-<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/Media/midone.png">
-<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/Media/saksa.png">
+<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/media/testrun1.png">
+<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/media/notail.png">
+<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/media/topson.png">
+<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/media/sumail.png">
+<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/media/midone.png">
+<img src="https://github.com/FerruccioSisti/DotaDraftPlanner/blob/master/media/saksa.png">
