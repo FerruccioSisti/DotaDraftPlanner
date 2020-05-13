@@ -22,42 +22,64 @@
              }
          }
       </style>
-   </head>
-
-<p id="notice"><%= notice %></p>
-
-<h1>Scouting History</h1>
-<b>Total times application used: <%= @scouters.count %> </b>
+</head>
+<body style="background-color:black;">
+<h1 style="color:white;text-align:center">Review Scouting History</h1>
 <br><br>
 
-<table width="100%">
-  <thead>
-    <tr>
-      <th>Team</th>
-      <th>Player1</th>
-      <th>Player2</th>
-      <th>Player3</th>
-      <th>Player4</th>
-      <th>Player5</th>
-      <th colspan="1"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @scouters.each do |scout| %>
-      <tr>
-        <td><%= scout.team %></td>
-        <td><%= scout.player1 %></td>
-        <td><%= scout.player2 %></td>
-        <td><%= scout.player3 %></td>
-        <td><%= scout.player4 %></td>
-        <td><%= scout.player5 %></td>
-        <td><%= link_to 'Show', scout %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'Scout team/players', new_scouter_path %>
+<div class="container">
+    <% @scouters.each do |scout| %>
+        <div class="row">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= link_to "Scouting Session", scout %>
+                    </h5>
+                    <p class="card-text">
+                        <% if scout.team.present? %>
+                            <%= name_scraper(scout.team) %>
+                            <br/>
+                        <% end %>
+                        <% if scout.player1.present? %>
+                            <%= name_scraper(scout.player1) %>
+                            <br/>
+                        <% end %>
+                        <% if scout.player2.present? %>
+                            <%= name_scraper(scout.player2) %>
+                            <br/>
+                        <% end %>
+                        <% if scout.player3.present? %>
+                            <%= name_scraper(scout.player3) %>
+                            <br/>
+                        <% end %>
+                        <% if scout.player4.present? %>
+                            <%= name_scraper(scout.player4) %>
+                            <br/>
+                        <% end %>
+                        <% if scout.player5.present? %>
+                            <%= name_scraper(scout.player5) %>
+                            <br/>
+                        <% end %>
+                    </p>
+                    <p class="card-text">
+                        <small class="text-muted">
+                            <%= scout.updated_at.strftime("%A, %B %e, %Y") %> UTC
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    <div class="row">
+        <div class="digg_pagination">
+            <div class="page_info">
+              <%= page_entries_info @scouters %>
+            </div>
+            <%= will_paginate @scouters, :container => false %>
+          </div>
+    </div>
+</div>
+</body>
