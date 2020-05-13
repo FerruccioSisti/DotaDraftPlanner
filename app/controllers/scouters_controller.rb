@@ -4,7 +4,7 @@ class ScoutersController < ApplicationController
   # GET /scouters
   # GET /scouters.json
   def index
-    @scouters = Scouter.all
+    @scouters = Scouter.all.order("created_at DESC").paginate(page: params[:page])
   end
 
   # GET /scouters/1
