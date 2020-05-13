@@ -113,6 +113,9 @@ module ApplicationHelper
     end
 
     def name_scraper(base_url)
+        if !base_url.include?("dotabuff.com/")
+            return "Error, input was not correct"
+        end
         unparsed_page = HTTParty.get(base_url)
 
         if unparsed_page.response.body.nil? || unparsed_page.response.body.empty? then
