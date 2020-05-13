@@ -1,5 +1,22 @@
 module ApplicationHelper
 
+    def page_entries_info(collection, options = {})
+      entry_name = options[:entry_name] || (collection.empty?? 'item' :
+          collection.first.class.name.split('::').last.titleize)
+      if collection.total_pages < 2
+        case collection.size
+        when 0; "No #{entry_name.pluralize} found"
+        else; "Displaying all #{entry_name.pluralize}"
+        end
+      else
+        %{Displaying %d - %d of %d #{entry_name.pluralize}} % [
+          collection.offset + 1,
+          collection.offset + collection.length,
+          collection.total_entries
+        ]
+      end
+    end
+
     def recent_games_scraper(player_url)
         url = player_url + "/matches"
 
@@ -101,7 +118,7 @@ module ApplicationHelper
         if unparsed_page.response.body.nil? || unparsed_page.response.body.empty? then
             return "Error retrieving URL"
         end
-        
+
         parsed_page = Nokogiri::HTML(unparsed_page)
         name = parsed_page.css('div.header-content-title').children[0].children[0].text
         return name
