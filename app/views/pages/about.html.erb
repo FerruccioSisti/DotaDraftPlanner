@@ -1,0 +1,49 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:title" content="DOTA 2 Draft Planner" >
+    <meta property="og:url" content="https://dota-draft-planner.herokuapp.com/" >
+    <meta property="og:description" content="Find information about your opponents recent games all in one convenient location!">
+    <style type="text/css">
+            body{
+                margin:0;
+                padding:0;
+                background:black;
+            }
+            p {
+             color: white;
+            }
+    </style>
+</head>
+<br/>
+<div class='container'>
+    <div style="background:#474747 !important" class='jumbotron'>
+        <h1 class='display-4'>About the DOTA 2 Draft Planner</h1>
+        <div class='row'>
+            <br/>
+            <p style='text-align: justify'>
+                This is a project that I'm working on for <b>fun</b> in my free time, and is meant to help
+                players gather info on what heroes opponents have been playing in their recent DOTA 2 matches
+                in order to help prepare for upcoming drafts. This project was built using Ruby on Rails,
+                and utilizes web scraping to get information using dotabuff links provided by you. This is also
+                my first time using Rails to complete a project, so there may be things that could be implemented
+                better. If you would like to view the code that makes this application function, you can do so
+                <%= link_to "here", "https://github.com/FerruccioSisti/DotaDraftPlanner", target: "_blank"%>.
+                If you have any ideas for improvement, don't hesitate to <a href="mailto:sisti@uwindsor.ca" target="_blank">reach out</a>.
+
+                <br/><br/>
+                In order to use this application, click the "Home"
+                link at the top of the page to go to the form. When filling out the form, ensure that the
+                dotabuff links you provide are in the same format as the placeholder text.
+                If you do not provide the link in the same format, the application <b>will not work</b>.
+                Once you are done submitting dotabuff links for the players you are concerned about, press the
+                <b>GET STATS</b> button at the bottom of the page. You will then be redirected to another page
+                with all the available and relevant information displayed in table format for each player.
+                <br/><br/>
+
+                I do not own the templates used for the form or the table displays. The creators of each are
+                denoted at the top of each respectively used html.erb file. Thank you for using my application.
+                <br/><br/>
+            </p>
+            <hr class='my-4'>
+    </div>
+</div>
