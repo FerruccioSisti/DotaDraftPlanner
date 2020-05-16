@@ -105,10 +105,11 @@
 </head>
 <body>
 <h1 style = "color:white">DOTA 2 Draft Planner</h1>
-<h2 style = "color: #877c78;">Displaying all available and relevant stats for your draft</h2><br><br>
+<h2 style = "color: #877c78;">Displaying all available and relevant stats for your draft</h2><br/>
 
 <!-- team table -->
 <% if @scouter.team.present?%>
+<br/>
 <h2 style = "blue"><a href="<%= @scouter.team %>/heroes" target="_blank"><%= name_scraper(@scouter.team) %>'s Match History</a></h2>
 <table class="container">
 	<thead>
@@ -133,6 +134,7 @@
 
 <!-- first player table -->
 <% if @scouter.player1.present?%>
+<br/>
 <h2 style = "blue"><a href="<%= @scouter.player1 %>/matches" target="_blank"><%= name_scraper(@scouter.player1) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
@@ -159,6 +161,7 @@
 
 <!-- second player table -->
 <% if @scouter.player2.present?%>
+<br/>
 <h2 style = "blue"><a href="<%= @scouter.player2 %>/matches" target="_blank"><%= name_scraper(@scouter.player2) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
@@ -185,6 +188,7 @@
 
 <!-- third player table -->
 <% if @scouter.player3.present?%>
+<br/>
 <h2 style = "blue"><a href="<%= @scouter.player3 %>/matches" target="_blank"><%= name_scraper(@scouter.player3) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
@@ -211,6 +215,7 @@
 
 <!-- fourth player table -->
 <% if @scouter.player4.present?%>
+<br/>
 <h2 style = "blue"><a href="<%= @scouter.player4 %>/matches" target="_blank"><%= name_scraper(@scouter.player4) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
@@ -237,6 +242,7 @@
 
 <!-- fifth player table -->
 <% if @scouter.player5.present?%>
+<br/>
 <h2 style = "blue"><a href="<%= @scouter.player5 %>/matches" target="_blank"><%= name_scraper(@scouter.player5) %>'s Recent Match History</a></h2>
 <table class="container">
 	<thead>
