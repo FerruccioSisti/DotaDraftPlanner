@@ -14,6 +14,13 @@
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.17451" />
 <link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.17451" />
 <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      color: #fff;
+      font-family: ...;
+    }
     .form-label-left{
         width:150px;
     }
@@ -88,6 +95,23 @@
 }
 .form-all {
   font-size: 14px;
+}
+.form-description-content {
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+}
+.form-description {
+    z-index: 1000;
+    position: absolute;
+    right: 7px;
+    max-width: 200px;
+    top: 6px;
+    border: 4px solid #ccc;
+    border-radius: 6px 6px;
+    box-shadow: 0px 2px 4px #666;
+    background: #f5f5f5;
+    white-space: normal;
 }
 .form-label {
   font-weight: bold;
@@ -771,7 +795,7 @@ div.form-header-group {
 
 .form-subHeader {
     border-top : none;
-    font-size : 18px !important;
+    font-size : 20px !important;
     line-height : 1.4;
     font-style : normal;
     color : #000;
@@ -814,7 +838,7 @@ div.form-error-message {
 .form-textbox, .form-textarea {
     border : 1px solid #ABABAB;
     box-shadow : none;
-    font-size : 15px;
+    font-size : 24px;
 }
 
 .form-button-error {
