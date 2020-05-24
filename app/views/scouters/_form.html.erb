@@ -1421,10 +1421,10 @@ if (window.JotForm && JotForm.accessible) $('input_12').setAttribute('tabindex',
 JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBMIT","type":"control_button"},null,null,{"name":"clickTo","qid":"5","text":"DOTA 2 Draft Planner","type":"control_head"},{"name":"divider","qid":"6","type":"control_divider"},{"description":"Copy and paste the link to the team you're scouting's eSports profile on dotabuff","name":"teamEsports","qid":"7","subLabel":"","text":"Team eSports Dotabuff link","type":"control_textbox"},{"description":"Copy and paste the link to the player you're scouting's profile on dotabuff","name":"playerDotabuff","qid":"8","subLabel":"","text":"Player Dotabuff link","type":"control_textbox"},{"description":"Copy and paste the link to the player you're scouting's profile on dotabuff","name":"playerDotabuff9","qid":"9","subLabel":"","text":"Player Dotabuff link","type":"control_textbox"},{"description":"Copy and paste the link to the player you're scouting's profile on dotabuff","name":"playerDotabuff10","qid":"10","subLabel":"","text":"Player Dotabuff link","type":"control_textbox"},{"description":"Copy and paste the link to the player you're scouting's profile on dotabuff","name":"playerDotabuff11","qid":"11","subLabel":"","text":"Player Dotabuff link","type":"control_textbox"},{"description":"Copy and paste the link to the player you're scouting's profile on dotabuff","name":"playerDotabuff12","qid":"12","subLabel":"","text":"Player Dotabuff link","type":"control_textbox"}]);}, 20);
 </script>
 </head>
-<%= form_with(model: scouter, local: true) do |form| %>
-  <% if scouter.errors.any? %>
+<%= form_for @scouter do |form| %>
+  <% if @scouter.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(scouter.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@scouter.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
         <% scouter.errors.full_messages.each do |message| %>
@@ -1434,7 +1434,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
     </div>
   <% end %>
 <body>
-<form class="jotform-form" action="/scouters" method="post" name="form_201195900568255" id="201195900568255" accept-charset="utf-8" autocomplete="on">
+<form class="jotform-form" action="/scouters" onclick="validateAndSend()" method="post" name="form_201195900568255" id="201195900568255" accept-charset="utf-8" autocomplete="on">
   <input type="hidden" name="formID" value="201195900568255" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -1467,7 +1467,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
       <li class="form-line" data-type="control_textbox" id="id_8">
         <label class="form-label form-label-top" id="label_8" for="input_8"> Player 1 Dotabuff Link </label>
         <div id="cid_8" class="form-input-wide">
-          <input type="text" id="player1" name="scouter[player1]" data-type="input-textbox" class="form-textbox validate[Url]" size="20" value="" placeholder="https://www.dotabuff.com/players/19672354" data-component="textbox" aria-labelledby="label_9" />
+          <input type="text" id="player1" name="scouter[player1]" data-type="input-textbox" class="form-textbox validate[Url]" size="20" value="" placeholder="https://www.dotabuff.com/players/19672354" data-component="textbox" aria-labelledby="label_9"/>
         </div>
       </li>
       <li class="form-line" data-type="control_textbox" id="id_9">
@@ -1508,6 +1508,18 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
         <input type="text" name="website" value="" />
       </li>
     </ul>
-</form></body>
+</form>
+    <script>
+        function validateAndSend() {
+            if (form_201195900568255.player1.value == '' && form_201195900568255.team.value == '') {
+                alert('You have to enter at least one phone number.');
+                return false;
+            }
+            else {
+                form_201195900568255.submit();
+            }
+        }
+    </script>
+</body>
 </html>
 <% end %>

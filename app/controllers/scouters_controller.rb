@@ -1,6 +1,6 @@
 class ScoutersController < ApplicationController
   before_action :set_scouter, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /scouters
   # GET /scouters.json
   def index
@@ -25,10 +25,9 @@ class ScoutersController < ApplicationController
   # POST /scouters.json
   def create
     @scouter = Scouter.new(scouter_params)
-
     respond_to do |format|
       if @scouter.save
-        format.html { redirect_to @scouter, notice: 'Available information was retrieved' }
+        format.html { redirect_to @scouter }
         format.json { render :show, status: :created, location: @scouter }
       else
         format.html { render :new }
