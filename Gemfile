@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 #### Custom gems
 gem 'httparty'
 gem 'nokogiri'
+gem 'simple_form'
 gem 'will_paginate'
 ####
 
