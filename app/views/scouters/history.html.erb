@@ -26,7 +26,7 @@
 <body style="background-color:black;">
 <br/>
 <h1 style="color:white;text-align:center">Review Scouting History</h1>
-<br/><br/>
+<br/>
 
 <div class="container">
     <% @scouters.each do |scout| %>
@@ -39,7 +39,7 @@
                         </h5>
                         <p class="card-text">
                             <% if scout.team.present? %>
-                                <%= name_scraper(scout.team) %>
+                                <%= scout.teamname %>
                                 <br/>
                             <% end %>
                             <% if scout.player1.present? %>
@@ -47,19 +47,19 @@
                                 <br/>
                             <% end %>
                             <% if scout.player2.present? %>
-                                <%= name_scraper(scout.player2) %>
+                                <%= scout.player2name %>
                                 <br/>
                             <% end %>
                             <% if scout.player3.present? %>
-                                <%= name_scraper(scout.player3) %>
+                                <%= scout.player3name %>
                                 <br/>
                             <% end %>
                             <% if scout.player4.present? %>
-                                <%= name_scraper(scout.player4) %>
+                                <%= scout.player4name %>
                                 <br/>
                             <% end %>
                             <% if scout.player5.present? %>
-                                <%= name_scraper(scout.player5) %>
+                                <%= scout.player5name %>
                                 <br/>
                             <% end %>
                         </p>
