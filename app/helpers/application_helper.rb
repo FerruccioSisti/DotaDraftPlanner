@@ -17,6 +17,29 @@ module ApplicationHelper
       end
     end
 
+    def validatedb(scouter)
+        if scouter.team.present?
+            scouter.write_attribute(:teamname, name_scraper(scouter.team))
+        end
+        if scouter.player1.present?
+            scouter.write_attribute(:player1name, name_scraper(scouter.player1))
+        end
+        if scouter.player2.present?
+            scouter.write_attribute(:player2name, name_scraper(scouter.player2))
+        end
+        if scouter.player3.present?
+            scouter.write_attribute(:player3name, name_scraper(scouter.player3))
+        end
+        if scouter.player4.present?
+            scouter.write_attribute(:player4name, name_scraper(scouter.player4))
+        end
+        if scouter.player5.present?
+            scouter.write_attribute(:player5name, name_scraper(scouter.player5))
+        end
+        
+        scouter.save
+    end
+
     def recent_games_scraper(player_url)
         url = player_url + "/matches"
 
