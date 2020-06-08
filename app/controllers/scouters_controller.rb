@@ -68,6 +68,6 @@ class ScoutersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def scouter_params
-      params.require(:scouter).permit(:team, :player1, :player2, :player3, :player4, :player5, :teamname, :player1name, :player2name, :player3name, :player4name, :player5name)
+      params.require(:scouter).permit(:team, :player1, :player2, :player3, :player4, :player5)
     end
 end
